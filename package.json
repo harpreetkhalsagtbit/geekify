@@ -1,6 +1,6 @@
 {
   "name": "geekify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "cli for geek testing - Coming Soon - In Progress",
   "main": "geekify.js",
   "bin": {
