@@ -1,14 +1,15 @@
 {
   "name": "geekify",
   "version": "0.0.2",
-  "description": "cli for geek testing - Coming Soon - In Progress",
+  "description": "A CLI for creating an Interactive Git Repository for making a Step by Step Guide for things like - Tutorials etc.",
   "main": "geekify.js",
   "bin": {
-    "geekify": "geekify.js"
+    "geek": "geekify.js"
   },
   "dependencies"  : {
     "commander": ">=0.6.0",
-    "shelljs": ""
+    "colors": ">=1.1.2",
+    "promise": ">=7.0.2"
   },
   "author": "harpreetkhalsagtbit (https://github.com/harpreetkhalsagtbit)",
   "license": "GPL"
