@@ -123,10 +123,10 @@ geekify commands
 2. **Init** (Initialize + Reset)
 3. **Next** (Checkout to Next git commit)
 4. **Previous** (Checkout to Previous git commit)
-5. ***Run** (Run code - server.js) - **Implementation Pending**
+5. *Run (Run code - server.js) - **Implementation Pending**
 6. **ShowDiff** (Change in code between current and previous git commit)
-7. ***Jump** (Jump to particular git commit) - **Implementation Pending**
-8. ***validate** (validate JSON file - geekify.json) - **Implementation Pending**
+7. *Jump (Jump to particular git commit) - **Implementation Pending**
+8. *validate (validate JSON file - geekify.json) - **Implementation Pending**
 
 Note: (*) Implementation Pending
 
