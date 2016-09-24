@@ -4,7 +4,7 @@
   "description": "A CLI for creating an Interactive Git Repository for making a Step by Step Guide for things like - Tutorials etc.",
   "main": "geekify.js",
   "bin": {
-    "geek": "geekify.js"
+    "geekify": "geekify.js"
   },
   "dependencies"  : {
     "commander": ">=0.6.0",

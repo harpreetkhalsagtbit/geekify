@@ -7,14 +7,28 @@ program
     .version('0.0.1')
 
 program
-    .command('reset')
+    .command('init')
     .description('Reset all changes and Initialize')
+    .action(function(name) {
+        geekHandler.printLibName();
+        geekHandler.geekPerformInitAction().then(function() {
+            console.log("Init done")
+        }, function(err) {
+            console.error("geekPerformInitAction: ", err)
+        }).catch(function(err) {
+            console.log(err.stack);
+        });
+    });
+
+program
+    .command('reset')
+    .description('Reset all changes')
     .action(function(name) {
         geekHandler.printLibName();
         geekHandler.geekPerformResetAction().then(function() {
             console.log("Reset done")
         }, function(err) {
-            console.error("geekPerformReestAction: ", err)
+            console.error("geekPerformResetAction: ", err)
         }).catch(function(err) {
             console.log(err.stack);
         });
