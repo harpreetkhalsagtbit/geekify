@@ -1,6 +1,6 @@
 {
   "name": "geekify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A CLI for creating an Interactive Git Repository for making a Step by Step Guide for things like - Tutorials etc.",
   "main": "geekify.js",
   "bin": {
