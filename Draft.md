@@ -32,19 +32,18 @@ Development Main Utility
 
 geekify.json
 ========
-	
-	{
-	    "branches": [
-	        "step1",
-	        "step2",
-	        "step3",
-	        "step4"
-	    ],
-	    "index": 0,
-	    "initialBranch": "step1",
-	    "main_server": "server.js"
-	}
-
+    {
+        "branches": [
+            "step1",
+            "step2",
+            "step3",
+            "step4"
+        ],
+        "index": 0,
+        "initialBranchIndex": "0",
+        "main": "server.js"
+    }
+    
 
 How to create **geekify** specific Github repository 
 ======
