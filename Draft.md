@@ -32,6 +32,7 @@ Development Main Utility
 
 geekify.json
 ========
+    
     {
         "branches": [
             "step1",
@@ -40,10 +41,10 @@ geekify.json
             "step4"
         ],
         "index": 0,
-        "initialBranchIndex": "0",
-        "main": "server.js"
+        "initialBranch": "step1",
+        "main_server": "server.js"
     }
-    
+
 
 How to create **geekify** specific Github repository 
 ======
@@ -122,11 +123,12 @@ geekify commands
 2. **Init** (Initialize + Reset)
 3. **Next** (Checkout to Next git commit)
 4. **Previous** (Checkout to Previous git commit)
-5. **Run** (Run code - server.js)
+5. ***Run** (Run code - server.js) - **Implementation Pending**
 6. **ShowDiff** (Change in code between current and previous git commit)
-7. **Jump** (Jump to particular git commit)
-8. **validate** (validate JSON file - geekify.json)
+7. ***Jump** (Jump to particular git commit) - **Implementation Pending**
+8. ***validate** (validate JSON file - geekify.json) - **Implementation Pending**
 
+Note: (*) Implementation Pending
 
 Best way to write geek.json file
 ========
