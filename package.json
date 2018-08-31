@@ -6,6 +6,9 @@
   "bin": {
     "geekify": "geekify.js"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "colors": ">=1.1.2",
     "commander": ">=0.6.0",
@@ -13,5 +16,8 @@
     "promise": ">=7.0.2"
   },
   "author": "harpreetkhalsagtbit (https://github.com/harpreetkhalsagtbit)",
-  "license": "GPL"
+  "license": "GPL",
+  "devDependencies": {
+    "jest": "^23.5.0"
+  }
 }
