@@ -3,7 +3,8 @@ node_js:
   - "iojs"
   - "node"
 node_js:
+  - '10'
+  - '9'
   - '8'
   - '6'
-  - '4'
 sudo: false
