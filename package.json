@@ -7,7 +7,8 @@
     "geekify": "geekify.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepush": "npm test"
   },
   "dependencies": {
     "colors": ">=1.1.2",
@@ -18,6 +19,7 @@
   "author": "harpreetkhalsagtbit (https://github.com/harpreetkhalsagtbit)",
   "license": "GPL",
   "devDependencies": {
+    "husky": "^0.14.3",
     "jest": "^23.5.0"
   }
 }
