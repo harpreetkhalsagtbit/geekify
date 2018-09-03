@@ -1,15 +1,25 @@
 const utils = require("../lib/utils");
 
-// test('Utils Execute Command Function - execute', (done) => {
-//     function callback(error, stdout, stderr) {
-//         expect(error).toBe(null);
-//         expect(stdout).not.toBeNull();
-//         expect(stderr).toBe('');
-//         done();
-//     }
+let asyncFunSeries = (param) => {
+    return () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(param);
+            }, 200)
+        });
+    }
+}
 
-//     utils.execute('ls -a', callback)
-// });
+let asyncFuncWaterfall = (param) => {
+    return () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                let res = 10;
+                resolve(param || res);
+            }, 200)
+        });
+    }
+}
 
 
 test('Utils Promise Series Function', (done) => {
@@ -17,58 +27,17 @@ test('Utils Promise Series Function', (done) => {
         expect(res).toBe(40);
         done();
     }
-
-    let f1 = (param) => {
-        return () => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    resolve(param);
-                }, 200)
-            });
-        }
-    }
-
-    let f2 = (param) => {
-        return () => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    resolve(param);
-                }, 200)
-            });
-        }
-    }
-
-    let f3 = (param) => {
-        return () => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    resolve(param);
-                }, 200)
-            });
-        }
-    }
-
-    let f4 = (param) => {
-        return () => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    resolve(param);
-                }, 200)
-            });
-        }
-    }
-
-    
-    utils.PromiseSeries([f1(10), f2(20), f3(30), f4(40)]).then(callback)
-
+    let arr = [asyncFunSeries(10), asyncFunSeries(20), asyncFunSeries(30), asyncFunSeries(40)];
+    utils.PromiseSeries(arr).then(callback)
 });
 
-// test('CopyJSONFile Function - execute', (done) => {
+test('Utils Promise Waterfall Function', (done) => {
+        
+    function callback(res) {
+        expect(res).toBe(40);
+        done();
+    }    
+    let arr = [asyncFuncWaterfall(10), asyncFuncWaterfall(20), asyncFuncWaterfall(30), asyncFuncWaterfall(40)];
+    utils.PromiseWaterfall(arr).then(callback)
+});
 
-//     function callback(res) {
-//         expect(res).toBe(true);
-//         done();
-//     }
-
-//     utils.copyJsonFile('copy.me', 'paste.me')().then(callback)
-// });
