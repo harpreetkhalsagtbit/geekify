@@ -1,12 +1,12 @@
+const util = require("../lib/utils");
 const geekHandler = require("../lib/handlers");
 
-test('Execute Command Function - execute', (done) => {
-    function callback(error, stdout, stderr) {
-        expect(error).toBe(null);
+test('GeekExecuteCommand Function - execute', (done) => {
+    function callback(stdout) {
         expect(stdout).not.toBeNull();
-        expect(stderr).toBe('');
         done();
     }
 
-    geekHandler.execute('ls -a', callback)
+    geekHandler.geekExecuteCommand('ls -a')().then(callback)
 });
+
