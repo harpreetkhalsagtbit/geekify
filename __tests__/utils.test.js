@@ -1,15 +1,15 @@
 const utils = require("../lib/utils");
 
-test('Utils Execute Command Function - execute', (done) => {
-    function callback(error, stdout, stderr) {
-        expect(error).toBe(null);
-        expect(stdout).not.toBeNull();
-        expect(stderr).toBe('');
-        done();
-    }
+// test('Utils Execute Command Function - execute', (done) => {
+//     function callback(error, stdout, stderr) {
+//         expect(error).toBe(null);
+//         expect(stdout).not.toBeNull();
+//         expect(stderr).toBe('');
+//         done();
+//     }
 
-    utils.execute('ls -a', callback)
-});
+//     utils.execute('ls -a', callback)
+// });
 
 
 test('Utils Promise Series Function', (done) => {
