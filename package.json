@@ -17,7 +17,9 @@
     "promise": ">=7.0.2"
   },
   "jest": {
-    "testPathIgnorePatterns" : ["<rootDir>/__tests__/geekify-demo"]
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/geekify-demo"
+    ]
   },
   "author": "harpreetkhalsagtbit (https://github.com/harpreetkhalsagtbit)",
   "license": "GPL",
