@@ -37,7 +37,7 @@ test('Utils Promise Waterfall Function', (done) => {
         expect(res).toBe(40);
         done();
     }    
-    let arr = [asyncFuncWaterfall(10), asyncFuncWaterfall(20), asyncFuncWaterfall(30), asyncFuncWaterfall(40)];
+    let arr = [asyncFuncWaterfall(10), asyncFuncWaterfall(20), asyncFuncWaterfall(), asyncFuncWaterfall(40)];
     utils.PromiseWaterfall(arr).then(callback)
 });
 
