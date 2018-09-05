@@ -41,3 +41,44 @@ test('Utils Promise Waterfall Function', (done) => {
     utils.PromiseWaterfall(arr).then(callback)
 });
 
+
+
+/* 
+let f1 = (param) => {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve(['A', 'X'])
+		}, 200)
+	})
+}
+
+let f2 = ([param1, param2]) => {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve('B' + param1 + param2)
+		}, 200)
+	})
+}
+let f3 = (param) => {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve('C' + param)
+		}, 200)
+	})
+}
+
+let PromiseWaterfall = (arr) => {
+    let ret = Promise.resolve('null');
+    return arr.reduce((result, item, index) => {
+        return result.then((value) => {
+            return item(value).then((val) => {
+                return val;
+            })
+        })
+    }, ret)
+}
+let arr = [f1, f2, f3]
+PromiseWaterfall(arr).then((res) => {
+	res
+})
+ */
