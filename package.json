@@ -16,6 +16,11 @@
     "figlet": "^1.2.0",
     "promise": ">=7.0.2"
   },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/geekify-demo"
+    ]
+  },
   "author": "harpreetkhalsagtbit (https://github.com/harpreetkhalsagtbit)",
   "license": "GPL",
   "devDependencies": {
